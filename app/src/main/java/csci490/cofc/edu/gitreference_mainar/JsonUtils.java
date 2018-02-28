@@ -104,9 +104,20 @@ public class JsonUtils {
     }
 
     public static boolean append(Context context, String fileName, String jsonString) {
-        // TODO: Your code here
+        try{
+            FileOutputStream fos = new FileOutputStream(fileName);
+            byte[] strToBytes = jsonString.getBytes();
+            fos.write(strToBytes);
+            fos.close();
+        }
+        catch (FileNotFoundException fileNotFound) {
+            return false;
+        }
+        catch (IOException ioException) {
+            return false;
+        }
 
-        return false;
+        return true;
     }
 
     public static boolean isFilePresent(Context context, String fileName) {
