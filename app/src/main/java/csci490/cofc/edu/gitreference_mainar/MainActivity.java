@@ -10,6 +10,8 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
+    //TODO: make .sort() method. glhf
+
     private ListView listView;
     String jsonStr;
     InputStream inputStream;
