@@ -5,10 +5,10 @@ package csci490.cofc.edu.gitreference_mainar;
  */
 
 public class GitReference {
-    String command;
-    String example;
-    String explanation;
-    String section;
+    private String command;
+    private String example;
+    private String explanation;
+    private String section;
 
     public String getCommand() {
         return command;

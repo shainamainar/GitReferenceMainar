@@ -57,8 +57,13 @@ public class JsonUtils {
                 JSONObject json_data = jArray.getJSONObject(i);
                 GitReference gitReference = new GitReference();
                 gitReference.setCommand(json_data.getString("command"));
-
                 Log.i("JSON", "Adding: " + gitReference.getCommand());
+                gitReference.setExample(json_data.getString("example"));
+                Log.i("JSON", "Adding: " + gitReference.getExample());
+                gitReference.setExplanation(json_data.getString("explanation"));
+                Log.i("JSON", "Adding: " + gitReference.getExplanation());
+                gitReference.setSection(json_data.getString("section"));
+                Log.i("JSON", "Adding: " + gitReference.getSection());
                 data.add(gitReference);
             }
 
